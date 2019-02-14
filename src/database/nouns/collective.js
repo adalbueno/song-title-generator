@@ -1,0 +1,23 @@
+export default [
+  'army',
+  'audience',
+  'band',
+  'board',
+  'cast',
+  'class',
+  'committee',
+  'company',
+  'crowd',
+  'family',
+  'faculty',
+  'group',
+  'jury',
+  'navy',
+  'puble',
+  'plethora',
+  'school',
+  'society',
+  'staff',
+  'team',
+  'troupe'
+]

@@ -1,0 +1,20 @@
+export default [
+  'abundant',
+  'billions',
+  'enough',
+  'few',
+  'full',
+  'hundreds',
+  'incalculable',
+  'limited',
+  'little',
+  'many',
+  'most',
+  'millions',
+  'numerous',
+  'scarce',
+  'some',
+  'sparse',
+  'substantial',
+  'thousands'
+]

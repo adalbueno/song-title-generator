@@ -1,0 +1,20 @@
+export default [
+  'broad',
+  'chubby',
+  'crooked',
+  'curved',
+  'deep',
+  'flat',
+  'high',
+  'hollow',
+  'low',
+  'narrow',
+  'refined',
+  'round',
+  'shallow',
+  'skinny',
+  'square',
+  'steep',
+  'straight',
+  'wide'
+]

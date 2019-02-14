@@ -1,0 +1,19 @@
+export default [
+  'ancient',
+  'brief',
+  'early',
+  'fast',
+  'future',
+  'late',
+  'long',
+  'modern',
+  'old',
+  'old-fashioned',
+  'prehistoric',
+  'quick',
+  'rapid',
+  'short',
+  'slow',
+  'swift',
+  'young'
+]

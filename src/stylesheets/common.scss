@@ -1,0 +1,108 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:900|Raleway');
+@import './variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  background: $main-bg-color;
+  font-family: $main-font-family;
+  font-size: $main-font-size;
+  color: $main-font-color;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url(https://picsum.photos/240/320/?random&blur);
+    background-size: cover;
+    opacity: .5;
+  }
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.main {
+  $dimensions: $main-font-size * 1.5;
+  flex: 1;
+  overflow: auto;
+  display: flex;
+  margin: $dimensions;
+  border: 1px solid $main-font-color;
+
+  > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: $dimensions;
+    overflow: hidden;
+
+    .content {
+      flex: 1;
+      overflow: auto;
+    }
+  }
+}
+
+.list {
+  &__item {
+    display: flex;
+    padding: $main-font-size 0;
+    position: relative;
+    border-bottom: 1px solid rgba($main-font-color, .25);
+
+    span {
+      flex: 1;
+    }
+
+    &__actions {
+      width: $main-font-size * 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      > i {
+        font-size: $main-font-size * 1.25;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.title {
+  text-transform: capitalize;
+}
+
+h1 {
+  font-family: $title-font-family;
+  font-size: $main-font-size * 2;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0 0 16px;
+
+  .connector {
+    font-size: $main-font-size * 1.5;
+    line-height: 1.2;
+    opacity: .5;
+    display: block;
+  }
+}

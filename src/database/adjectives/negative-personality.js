@@ -1,0 +1,23 @@
+export default [
+  'angry',
+  'bewildered',
+  'clumsy',
+  'defeated',
+  'embarrassed',
+  'fierce',
+  'grumpy',
+  'helpless',
+  'itchy',
+  'jealous',
+  'lazy',
+  'mysterious',
+  'nervous',
+  'obnoxious',
+  'panicky',
+  'pitiful',
+  'repulsive',
+  'scary',
+  'thoughtless',
+  'uptight',
+  'worried'
+]
