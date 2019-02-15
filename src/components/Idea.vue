@@ -7,6 +7,10 @@
 
     <div class="idea">
       <h1 v-html="phraseHTML"></h1>
+      <div class="actions">
+        <i class="far fa-heart" v-if="!isMyIdea(phrase)" @click="addToMyIdeas(phrase)"></i>
+        <i class="fas fa-heart" v-else @click="removeFromMyIdeas(phrase)"></i>
+      </div>
     </div>
 
     <div class="actions">
@@ -82,6 +86,9 @@ export default {
     },
     phraseHTML () {
       return this.phrase.html
+    },
+    myIdeas () {
+      return this.$store.state.idea.myIdeas
     }
   },
   methods: {
@@ -128,6 +135,15 @@ export default {
     },
     setHistoryOnStorage () {
       localStorage.setItem(this.storageKeys.history, JSON.stringify(this.history))
+    },
+    addToMyIdeas (phrase) {
+      this.$store.commit('addToMyIdeas', phrase.plain)
+    },
+    removeFromMyIdeas (phrase) {
+      this.$store.commit('removeFromMyIdeas', phrase.plain)
+    },
+    isMyIdea (phrase) {
+      return this.myIdeas.map((item) => item.title).indexOf(phrase.plain) > -1
     }
   }
 }
@@ -143,6 +159,10 @@ export default {
 
   .idea {
     flex: 1;
+
+    .actions {
+      font-size: $main-font-size * 2;
+    }
   }
 }
 

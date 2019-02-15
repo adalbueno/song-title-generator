@@ -8,7 +8,6 @@ import MyIdeasForm from '@/components/MyIdeasForm'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
   routes: [
     {
       path: '/',

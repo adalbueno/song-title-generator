@@ -116,6 +116,7 @@ h1 {
     flex: 1;
     list-style: none;
     padding: $main-font-size;
+    cursor: pointer;
 
     &.active {
       background: $main-font-color;
