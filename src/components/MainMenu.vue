@@ -13,11 +13,11 @@
         <span class="main-menu__item__link__text">History</span>
       </a>
     </router-link>
-    <router-link class="main-menu__item" tag="li" to="/favorites">
+    <router-link class="main-menu__item" tag="li" to="/my-ideas">
       <a class="main-menu__item__link">
         <i class="far fa-heart"></i>
-        <span class="notification__count" :class="{ active: favorites }">{{ favorites }}</span>
-        <span class="main-menu__item__link__text">Favorites</span>
+        <span class="notification__count" :class="{ active: myIdeas }">{{ myIdeas }}</span>
+        <span class="main-menu__item__link__text">My Ideas</span>
       </a>
     </router-link>
   </ul>
@@ -27,10 +27,10 @@
 export default {
   computed: {
     history () {
-      return this.$store.state.expression.history.length
+      return this.$store.state.idea.history.length
     },
-    favorites () {
-      return this.$store.state.expression.favorites.length
+    myIdeas () {
+      return this.$store.state.idea.myIdeas.length
     }
   }
 }

@@ -1,8 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Expression from '@/components/Expression'
+import Idea from '@/components/Idea'
 import History from '@/components/History'
-import Favorites from '@/components/Favorites'
+import MyIdeasList from '@/components/MyIdeasList'
+import MyIdeasForm from '@/components/MyIdeasForm'
 
 Vue.use(Router)
 
@@ -12,7 +13,7 @@ export default new Router({
     {
       path: '/',
       name: 'Home',
-      component: Expression
+      component: Idea
     },
     {
       path: '/history',
@@ -20,9 +21,14 @@ export default new Router({
       component: History
     },
     {
-      path: '/favorites',
-      name: 'Favorites',
-      component: Favorites
+      path: '/my-ideas',
+      name: 'myIdeas',
+      component: MyIdeasList
+    },
+    {
+      path: '/my-ideas/edit/:index',
+      name: 'myIdeasForm',
+      component: MyIdeasForm
     }
   ]
 })

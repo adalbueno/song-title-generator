@@ -1,16 +1,16 @@
 <template>
-  <div class="expressions">
+  <div class="ideas">
     <div class="controls" v-if="controls">
       <input type="checkbox" v-model="includeVerbs"> Verbs?
       <input type="checkbox" v-model="includeSubjects"> Subjects?
     </div>
 
-    <div class="expression">
+    <div class="idea">
       <h1 v-html="phraseHTML"></h1>
     </div>
 
     <div class="actions">
-      <button @click="update">Generate new {{ type }}</button>
+      <button @click="update">Generate new idea</button>
     </div>
   </div>
 </template>
@@ -23,10 +23,6 @@ export default {
     controls: {
       type: Boolean,
       default: false
-    },
-    type: {
-      type: String,
-      default: 'song title'
     }
   },
   data: () => ({
@@ -140,26 +136,14 @@ export default {
 <style lang="scss">
 @import '../stylesheets/variables';
 
-.expressions {
+.ideas {
   display: flex;
   flex-direction: column;
   width: 100%;
 
-  .expression {
+  .idea {
     flex: 1;
   }
-}
-
-button {
-  border: 1px solid darken($main-bg-color, 30%);
-  color: darken($main-bg-color, 30%);
-  padding: $main-font-size;
-  background: $main-font-color;
-  text-transform: uppercase;
-  font-size: $main-font-size;
-  outline: none;
-  cursor: pointer;
-  width: 100%;
 }
 
 </style>

@@ -8,8 +8,8 @@
           :key="index">
           <span class="title">{{ item }}</span>
           <div class="list__item__actions">
-            <i class="far fa-heart" v-if="!isFavorite(item)" @click="addToFavorites(item)"></i>
-            <i class="fas fa-heart" v-else @click="removeFromFavorites(item)"></i>
+            <i class="far fa-heart" v-if="!isMyIdea(item)" @click="addToMyIdeas(item)"></i>
+            <i class="fas fa-heart" v-else @click="removeFromMyIdeas(item)"></i>
           </div>
         </li>
       </ul>
@@ -25,21 +25,21 @@
 export default {
   computed: {
     history () {
-      return this.$store.state.expression.history
+      return this.$store.state.idea.history
     },
-    favorites () {
-      return this.$store.state.expression.favorites
+    myIdeas () {
+      return this.$store.state.idea.myIdeas
     }
   },
   methods: {
-    addToFavorites (item) {
-      this.$store.commit('addToFavorites', item)
+    addToMyIdeas (item) {
+      this.$store.commit('addToMyIdeas', item)
     },
-    removeFromFavorites (item) {
-      this.$store.commit('removeFromFavorites', item)
+    removeFromMyIdeas (item) {
+      this.$store.commit('removeFromMyIdeas', item)
     },
-    isFavorite (item) {
-      return this.favorites.indexOf(item) > -1
+    isMyIdea (title) {
+      return this.myIdeas.map((item) => item.title).indexOf(title) > -1
     },
     clear () {
       this.$store.commit('clearHistory')
