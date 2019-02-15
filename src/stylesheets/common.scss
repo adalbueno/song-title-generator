@@ -17,17 +17,18 @@ body {
   font-family: $main-font-family;
   font-size: $main-font-size;
   color: $main-font-color;
+  background-image: url(https://picsum.photos/120/160/?random&blur);
+  background-size: cover;
+  animation: fadeInFromNone 2s;
+}
 
-  &:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: url(https://picsum.photos/240/320/?random&blur);
-    background-size: cover;
-    opacity: .5;
+@-webkit-keyframes fadeInFromNone {
+  0% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
   }
 }
 
@@ -39,6 +40,7 @@ body {
   max-width: 480px;
   margin: 0 auto;
   position: relative;
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .main {

@@ -13,7 +13,7 @@
           </div>
         </li>
       </ul>
-      <p v-else>No myIdeas found so far.</p>
+      <p v-else>No saved ideas found so far.</p>
     </div>
   </div>
 </template>
